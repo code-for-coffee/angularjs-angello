@@ -194,6 +194,7 @@
     <Content Include="img\loader.gif" />
     <Content Include="img\note-bg.png" />
     <Content Include="img\note-blank.png" />
+    <Content Include="js\app.js" />
     <Content Include="lib\angular-animate.js" />
     <Content Include="lib\angular-mocks.js" />
     <Content Include="lib\angular-route.js" />

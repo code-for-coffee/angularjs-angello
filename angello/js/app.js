@@ -1,23 +1,17 @@
 ﻿/// <reference path="../../Scripts/_references.js" />
 
-var myModule = angular.module('angello', []);
+var myModule = angular.module('Angello', []);
 
-myModule.controller('MainCtrl', ['$scope', '$http', 'angelloHelper', 'angelloModel',
-	function ($scope, $http, mvpplantHelper, mvpplantModel) {
-
-	    //$http.get("api/GetAllStories").success(function (data, status, headers, config) {
-	    //    $scope.stories.push(data);
-	    //}).error(function (data, status, headers, config) {
-	    //    console.log("[ng-error(MainCtrl)] error: " + data);
-	    //});
+myModule.controller('MainCtrl', ['$scope', 'angelloHelper', 'angelloModel',
+	function ($scope, angelloHelper, angelloModel) {
 
 	    $scope.currentStory;
 
-	    $scope.types = mvpplantModel.getTypes();
-	    $scope.statuses = mvpplantModel.getStatuses();
-	    $scope.stories = mvpplantModel.getStories();
-	    $scope.typesIndex = mvpplantHelper.buildIndex($scope.types, 'name');
-	    $scope.statusesIndex = mvpplantHelper.buildIndex($scope.statuses, 'name');
+	    $scope.types = angelloModel.getTypes();
+	    $scope.statuses = angelloModel.getStatuses();
+	    $scope.stories = angelloModel.getStories();
+	    $scope.typesIndex = angelloHelper.buildIndex($scope.types, 'name');
+	    $scope.statusesIndex = angelloHelper.buildIndex($scope.statuses, 'name');
 
 	    $scope.setCurrentStory = function (story) {
 	        $scope.currentStory = story;
@@ -40,8 +34,8 @@ myModule.controller('MainCtrl', ['$scope', '$http', 'angelloHelper', 'angelloMod
 	    $scope.createStory = function () {
 	        $scope.stories.push({
 	            title: 'Edit me!',
-	            description: '',
-	            criteria: '',
+	            description: 'asd',
+	            criteria: 'asdfasdf',
 	            status: 'Back Log',
 	            type: 'feature',
 	            reporter: 'pending',
