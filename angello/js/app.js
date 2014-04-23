@@ -2,8 +2,15 @@
 
 var myModule = angular.module('Angello', []);
 
-myModule.controller('MainCtrl', ['$scope', 'angelloHelper', 'angelloModel',
-	function ($scope, angelloHelper, angelloModel) {
+myModule.controller('MainCtrl', ['$scope', '$http', 'angelloHelper', 'angelloModel',
+	function ($scope, $http, angelloHelper, angelloModel) {
+
+	    $http.defaults.useXDomain = true;
+	    $http.get('http://localhost:3000/login').success(function (status) {
+	        $scope.status = 'You are ' +
+            (res.loggedIn ? '' : 'not ') +
+            'logged in';
+	    });
 
 	    $scope.currentStory;
 

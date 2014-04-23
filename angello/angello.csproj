@@ -195,6 +195,7 @@
     <Content Include="img\note-bg.png" />
     <Content Include="img\note-blank.png" />
     <Content Include="js\app.js" />
+    <None Include="js\_references.js" />
     <Content Include="lib\angular-animate.js" />
     <Content Include="lib\angular-mocks.js" />
     <Content Include="lib\angular-route.js" />
@@ -228,6 +229,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="tests\angelloModelSpec.js" />
+    <Content Include="tests\MainCtrlSpec.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
